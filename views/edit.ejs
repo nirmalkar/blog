@@ -1,20 +1,20 @@
 <%include partials/header%>
 <div class="ui main text container segment">
-  <div class="ui huge header">Edit Blog</div>
+  <div class="ui huge header">Edit <%=blog.title%></div>
   <form class="ui form" action="/blogs" method="POST">
     <div class="field">
       <label>Title</label>
-      <input type="text" name="blog[title]" placeholder="title">
+      <input type="text" name="blog[title]" value="<%=blog.title%>">
 
     </div>
     <div class="field">
       <label>Image</label>
-      <input type="text" name="blog[image]" placeholder="image">
+      <input type="text" name="blog[image]" value="<%=blog.image%>">
 
     </div>
     <div class="field">
       <label>Blog Content</label>
-      <textarea name="blog[body]" id="" cols="30" rows="10"></textarea>
+      <textarea name="blog[body]" id="" cols="30" rows="10"><%=blog.body%></textarea>
     </div>
 
     <button class="ui button" type="submit">Submit</button>
