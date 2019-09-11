@@ -1,0 +1,18 @@
+<%include partials/header%>
+<form class="ui form" action="/blogs" method="POST">
+  <div class="field">
+    <input type="text" name="blog[title]" placeholder="title">
+
+  </div>
+  <div class="field">
+    <input type="text" name="blog[image]" placeholder="image">
+
+  </div>
+  <div class="field">
+    <textarea name="blog[body]" id="" cols="30" rows="10"></textarea>
+  </div>
+
+  <button class="ui button" type="submit">Submit</button>
+</form>
+
+<%include partials/footer%>
