@@ -4,9 +4,10 @@
 <%blogs.forEach(function(blog){%>
 <div>
   <h2><%=blog.title%></h2>
-  <img src="<%=blog.image%>" alt="" style="width: 500px; height: 500px">
+  <img src="<%=blog.image%>" alt="" style="width: 500px; height: 300px">
   <span><%=blog.created%></span>
   <p><%=blog.body%></p>
+  <a href="/blogs/<%=blog._id%>">Read More</a>
 </div>
 
 <%})%>
