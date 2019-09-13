@@ -8,17 +8,21 @@
       <img class="ui centered rounded image" src="<%=blog.image%>" alt="" style="">
 
     </div>
-    <div class="content">
+    <div class="p-margin content">
       <span><%=blog.created.toDateString()%></span>
 
     </div>
   </div>
-  <p><%=blog.body%></p>
-  <a href="/blogs/<%=blog._id%>">Read More</a>
-  <a href="/blogs/<%=blog._id%>/edit">edit</a>
-  <form action="/blogs" method="POST">
-    <a href="/blogs/<%=blog._id%>/delete" onclick="return confirm('are you sure you want to delete? ')">delete</a>
-  </form>
+  <p class="p-margin"><%=blog.body%></p>
+
+  <span>
+    <form class="p-margin" action="/blogs" method="POST">
+      <a class="ui blue button" href="/blogs/<%=blog._id%>/edit">Edit</a>
+      <a class="ui red button" href="/blogs/<%=blog._id%>/delete"
+        onclick="return confirm('are you sure you want to delete? ')">Delete</a>
+      <a class="ui green button" href="/blogs">Back</a>
+    </form>
+  </span>
 </div>
 
 

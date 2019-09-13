@@ -1,29 +1,30 @@
 <%include partials/header%>
 <div class="ui main text container">
-  <div class="ui huge header">Blog App</div>
+  <div class="ui bottom attached segment">
+    <div class="ui huge header">Blogs</div>
+
+  </div>
   <div class="ui top attached segment">
     <div class="ui divided items">
       <%blogs.forEach(function(blog){%>
       <div>
         <div class="item">
-          <img src="<%=blog.image%>" alt="" style="width: 300px; height: 200px">
-        </div>
-        <div class="content">
-          <a class="ui floated blue button" href="/blogs/<%=blog._id%>">
-            Read More
-            <i class="right chevron icon"></i>
-          </a>
-          <div class="meta">
-            <span><%=blog.created.toDateString()%></span>
-
+          <div class="image">
+            <img src="<%=blog.image%>" alt="" style="width: 300px; height: 200px">
           </div>
-          <div class="description">
-            <p><%-blog.body.substring(0, 100)%></p>
-
-          </div>
-          <div class="extra">
-            <a class="header" href="/blogs/<%=blog._id%>"><%=blog.title%></a>
-
+          <div class="content">
+            <div class="meta p-margin">
+              <span><%=blog.created.toDateString()%></span>
+            </div>
+            <div class="description p-margin">
+              <p><%-blog.body.substring(0, 100)%></p>
+            </div>
+            <div style="margin: 10px 0">
+              <a class="ui blue button" href="/blogs/<%=blog._id%>">
+                Read More
+                <i class="right chevron icon"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -31,7 +32,4 @@
     </div>
   </div>
 </div>
-<h1>this is index page!!</h1>
-
-
 <%include partials/footer%>
