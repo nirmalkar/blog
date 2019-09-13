@@ -1,4 +1,4 @@
 # blog
 
 blog-app with CRUD operations,   
-Technology used - HTML, CSS, Semantic UI, NODE.js, Express js, MongoDB
+Technology used - HTML, CSS, Sema ntic UI, NODE.js, Express js, MongoDB Atlas.
