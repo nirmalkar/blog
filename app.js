@@ -1,14 +1,14 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
-const expressSanitizer = require('express-sanitizer')
+// const expressSanitizer = require('express-sanitizer')
 const methodOverride = require('method-override')
 const app = express()
 mongoose.connect('mongodb+srv://hemant123:hemant123@cluster0-wjckl.gcp.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true }, { useUnifiedTopology: true })
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: true }))
-app.use(express.expressSanitizer())
+// app.use(express.expressSanitizer())
 app.use(methodOverride('_method'))
 
 
