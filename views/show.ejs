@@ -15,6 +15,10 @@
   </div>
   <p><%=blog.body%></p>
   <a href="/blogs/<%=blog._id%>">Read More</a>
+  <a href="/blogs/<%=blog._id%>/edit">edit</a>
+  <form action="/blogs" method="POST">
+    <a href="/blogs/<%=blog._id%>/delete" onclick="return confirm('are you sure you want to delete? ')">delete</a>
+  </form>
 </div>
 
 
